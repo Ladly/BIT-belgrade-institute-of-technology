@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Important notice by author:
+        there are quite a few input elements with same name. I've noticed this bit later and i dont find necessary to fix this
+        because it is not idea to put all this form on one page (like I did) but plain practice
+        Also,
+         I didnt put any methods and actions where they are not explicity asked for 
+    -->
+    <!--
+        
+        T1
+        Text/Password Fields
+Create a page that contains a login form
+The form should contain username and password fields
+Add text to indicate which field is intended for what
+Login form should contain "forgot password" link
+When the user clicks on the link, they are redirected to a new "Reset password" page
+Reset page contains:
+an input text field that user uses to provide an email address
+"Send" link that redirects the user back to the login form
+        
+        T2
+Textarea/Radio/Checkbox
+Create a page that simulates a school quiz, containing multiple questions:
+The first question should contain multiple options out of which the student can select only one
+The second quiz question has multiple options out of which the user can select several
+The third question should require from user to insert some long text
+        
+        T3  
+Dropdown/Multiselect
+Create a page that contains three dropdown (selects) in one row
+Dropdowns are used by the user to provide the day, month and year of birth
+The page also contains multiselect box
+Multiselect box contains "categories" out of which the user can select several
+        
+        T4
+File input/Submit 
+Create a form used for submitting "Then VS Now" dieting/workout images and a description
+The form should contain two file input fields
+Both of the fields are file inputs
+They are used by the user for uploading the pictures of them and showing what they looked like before they started working out, and how they look now
+The page has to have an area where the user can put a picture description
+At the end of the form, there should be a submit button with text "Send" that is used to submit the form
+The form is submitted on page "handle-upload.html" and the user is redirected to it upon pressing the button
+This page should contain just a "Form submitted successfully"! message
+        
+        T5
+Reset/Button/Hidden
+Create a form that contains multiple elements (text, textarea, radio)
+At the end of the form, there are two buttons:
+The first one is a reset button used for resetting form
+The second button contains an image and text inside it (it's a submit button)
+
+        T6
+        Labels/Grouping
+Creates a form used for catering reservations
+The form contains multiple elements split into groups
+Each element should have a label assigned to it
+
+First group
+    Name of the group should be "Personal data"
+    The first field is for the name
+    The second one is for the email address
+    The third is for the phone number
+
+Second group
+    Name of the group should be "Location"
+    It should contain fields for:
+City
+Street
+Street number
+
+Third group
+Name of the group should be "Event info"
+The first element is dropdown containing the following options:
+birthday
+wedding (should be selected by default)
+company 
+The second element is for getting number of expected guests and it’s an input type element
+Placeholder is a number you choose 
+
+        T7
+HTML5 elements (required, date, email, url, search)
+Create a form for Facebook posts scheduling
+The page should have one form that consists of elements, labels and a submit button
+It should have one required text field (Name)
+A field for date on which the post should be created
+A URL field for a website that will be used for the post
+A field that contains an email address to which an email is sent after publishing the post
+
+
+     -->
+     <table width="100%">
+         <tr>
+             <th colspan="3">Form and table practice</th>
+         </tr>
+         <tr>
+             <td align="center">
+                <!-- T1 -->     
+                <form action="">
+                    <label>Name: <br> <input type="text" name="name"></label>
+                    <br>
+                    <label>Password: <br> <input type="password" name="password"></label>                    
+                    <p><a href="./resetPassword.html">Forgot password</a></p>        
+                </form>
+             </td>
+             <td width="30%" align="center">
+                 <!-- T2 -->
+                <form action="">
+                    <p>Do you love javascript?</p>
+                    <label><input type="radio" name="questionOne"></label>
+                    <label><input type="radio" name="questionOne"></label>
+            
+                    <p>What are boolean values in js?</p> 
+                    <label>True<input type="checkbox" name="bools[]" value="true"></label>
+                    <label>String<input type="checkbox" name="bools[]" value="string"></label>
+                    <label>False<input type="checkbox" name="bools[]" value="false"></label>
+                    <label>Nan<input type="checkbox" name="bools[]" value="NaN"></label>
+                    
+                    <p>Describe difference between null and undefined.</p>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </form>
+             </td>
+             <td align="center">
+                 <!-- T3 -->
+                 <!-- Tho the task is year month and stuff I did something else but the idea is still here  -->
+                <form action="">
+                    <p>
+                        <select name="drink">
+                            <option value="beer">Beer</option>
+                            <option value="juice">Juice</option>
+                            <option value="soda">Soda</option>
+                        </select>
+                        <select name="food">
+                            <option value="pizza">Pizza</option>
+                            <option value="meat">Meat</option>
+                            <option value="plants">Plants</option>
+                        </select>
+                        <select name="sport">
+                            <option value="football">Football</option>
+                            <option value="boxing">Boxing</option>
+                            <option value="curling">Curling</option>
+                        </select>
+                    </p>
+                    <p>
+                        <select name="seats" multiple="multiple" >
+                            <option value="sofa">Sofa</option>
+                            <option value="chair">Chair</option>
+                            <option value="floor">Floor</option>
+                            <option value="couch">Couch</option>
+                        </select>
+                    </p>
+                </form>
+             </td>
+         </tr>
+         <tr align="center">
+             <td>
+                <!-- T4 -->
+                <form action="./handle-upload.html" method="POST">
+                    <p><label>Before: <br> <input type="file" name="before"></label></p>
+                    <p><label>After: <br> <input type="file" name="before"></label></p>
+
+                    <p>Description:</p>
+                    <textarea name="description" cols="30" rows="10" placeholder="I eat this, workout like this and stuff "></textarea>   
+                    <br>
+                    <input type="submit" value="Submit">  
+                </form>
+             </td>
+             <td width="30%">
+                <!-- T5 -->
+                <form action="">
+                        <p> Some text: <br> <input type="text"></p>
+                        <p>Describe some text:</p> 
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <br>
+                        <p>Sex:
+                        <label>Male<input type="radio" name="someRadio"></label>
+                        <label>Female<input type="radio" name="someRadio"></label>
+                    </p>
+                        <p><input type="reset" value="Reset"></p> 
+                        <p>
+                        <button>
+                            <img src="./../../Day3/Web/ImagesExercises/images/2006-kate-beckinsale-400_0.jpg" alt="kate" width="15">
+                            Submit
+                        </button> 
+                    </p>        
+                </form>
+             </td>
+             <td>
+                <!-- T7 -->
+                <form action="">
+                    <label>Name: <br><input type="text" name="name" required></label> <br>        
+                    <label>Date: <br><input type="date" name="date"></label> <br>        
+                    <label>Link to:<br><input type="url" name="url"></label> <br>        
+                    <label>Email:<br><input type="email" name="email"></label> <br>
+                
+                    <p><input type="submit" value="Submit"></p>         
+                </form>
+             </td>
+         </tr>
+         <tr>
+             <td colspan="3" align="center">
+                 <!-- T6 -->
+                <form action="">
+                        <fieldset>
+                            <legend>Personal data</legend>
+                            <label>Name: <br> <input type="text" name="name"></label> <br>
+                            <label>Email: <br> <input type="email" name="email"></label> <br>
+                            <label>Phone Number: <br> <input type="text" name="phone"></label> <br>
+                        </fieldset>
+            
+                        <fieldset>
+                            <legend>Location</legend>
+                            <label>City: <br> <input type="text" name="city"></label> <br>
+                            <label>Street: <br> <input type="text" name="street"></label> <br>
+                            <label>Street Number: <br> <input type="text" name="strNumber"></label> <br>
+                        </fieldset>
+            
+                        <fieldset>
+                            <legend>Event info</legend>
+                            <label>Event type: <br> 
+                                <select name="type">
+                                    <option value="birthday">Birthday</option>
+                                    <option value="wedding" checked>Wedding </option>
+                                    <option value="company ">Company</option>
+                                </select>
+                            </label> <br>
+                            <label>Number of guests: <br> <input type="number" name="numOfGuests" placeholder="30"></label> <br>
+                        </fieldset>
+                    </form>
+             </td>
+         </tr>
+     </table>
+</body>
+</html>
